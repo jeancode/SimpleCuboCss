@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Color</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #contenido{
+            width: 100%;
+            height: 100%;
+            background: rgb(2, 2, 2);;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #cotenteCube{
+            width: 400px;
+            height: 400px;
+            background: rgb(0, 0, 0);;
+            transform-style: preserve-3d;
+            transform: translateY(-198px) rotateX(80deg) rotateZ(90deg);
+            position: relative;
+            animation: rotate 5s linear infinite;
+            
+        }
+        .faceCube1{
+            width: 400px;
+            height: 400px;;
+            background: linear-gradient(0deg,black, white);;
+            transform: translateZ(-198px) translateY(-200px)  rotateX(90deg);
+            
+        }
+        .faceCube2{
+            width: 400px;
+            height: 400px;;
+            background: linear-gradient(0deg,black, white);;
+            transform:  translateZ(-198px)  translateY(-200px)  rotateX(90deg);
+            
+        }
+        .faceCube3{
+            width: 400px;
+            height: 400px;;
+            background: linear-gradient(0deg,black, white);;
+            transform:  translateZ(-198px)  translateY(-800px) translateX(200px)  rotateX(90deg) rotateY(90deg);;
+            
+        }
+        .faceCube4{
+            width: 400px;
+            height: 400px;;
+            
+            transform: translateZ(-198px)  translateY(-1200px) translateX(-200px)  rotateX(90deg) rotateY(90deg);;
+            
+        }
+        .face{
+            background: linear-gradient(0deg,rgb(136, 255, 0), white);;
+            animation: rotateColor 2s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes rotateColor{
+            from{
+                filter: hue-rotate(0deg);
+            }
+            to{
+
+                filter: hue-rotate(360deg);
+            }
+        }
+        @keyframes rotate{
+
+            from{
+                transform: translateY(-200px) rotateX(80deg) rotateZ(360deg);
+                
+                
+            }to{
+                transform: translateY(-200px) rotateX(80deg) rotateZ(0deg);
+              
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="contenido">
+
+
+        <div id="cotenteCube">
+
+
+            <div class="faceCube1 face"></div>
+            <div class="faceCube2 face"></div>
+            <div class="faceCube3 face"></div>
+            <div class="faceCube4 face"></div>
+
+        </div>
+
+    </div>
+</body>
+</html>
